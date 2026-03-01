@@ -800,6 +800,15 @@ ul {
 }
 
 /* Contact */
+.contact {
+    background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+    color: var(--color-white);
+}
+
+.contact .section-title {
+    color: var(--color-white);
+}
+
 .contact-info {
     max-width: 900px;
     margin: 0 auto;
@@ -851,28 +860,34 @@ ul {
     gap: 0.25rem;
 }
 
+.contact-info p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .contact-item-text strong {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.contact-item a {
-    color: var(--color-primary);
+.contact-item a,
+.contact-item span {
+    color: var(--color-white);
     font-weight: 600;
 }
 
-.legal-note {
+.contact-info .legal-note {
     font-size: 0.9rem;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.4);
 }
 
 /* Footer */
 .footer {
     padding: var(--spacing-md) 0;
-    background: white;
-    border-top: 1px solid #eee;
+    background: #001a33;
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* 404 / Error page helper (if needed) */
