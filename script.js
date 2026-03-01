@@ -63,10 +63,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animatedElements.forEach((el, index) => {
         el.classList.add('fade-in-up');
-        // Add slight delay for grid items if needed, or rely on CSS transition delays
-        // el.style.animationDelay = `${index * 0.1}s`; 
         observer.observe(el);
     });
+
+    // Infinite Marquee Slider Logic
+    const track = document.querySelector('.reviews-track');
+    if (track) {
+        const cards = Array.from(track.children);
+
+        // Clone cards for seamless loop
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            track.appendChild(clone);
+        });
+
+        // 3D Tilt Effect (works on clones too)
+        const updateTilt = () => {
+            const allCards = track.querySelectorAll('.review-card');
+            allCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+                });
+            });
+        };
+        updateTilt();
+    }
+
+    // Fixed Header Scroll Effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
+    });
+
+    // Handle resize to fix offset
+    window.addEventListener('resize', () => updateSlider(currentIndex));
 });
 
 /* CSS Class needed for animation (Adding via JS or ensuring it's in CSS) */

@@ -27,9 +27,8 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Favicon (Inline SVG for now, or link to file if created) -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Obrazky/Favicon.png">
 </head>
 
 <body>
@@ -47,6 +46,7 @@
                     <li><a href="#cenik" class="nav__link">Ceník</a></li>
                     <li><a href="#priklady" class="nav__link">Příklady z praxe</a></li>
                     <li><a href="#recenze" class="nav__link">Recenze</a></li>
+                    <li><a href="#faq" class="nav__link">FAQ</a></li>
                     <li><a href="#kontakt" class="nav__cta">Kontakt</a></li>
                 </ul>
             </nav>
@@ -66,17 +66,19 @@
             <a href="#cenik" class="mobile-menu__link">Ceník</a>
             <a href="#priklady" class="mobile-menu__link">Příklady z praxe</a>
             <a href="#recenze" class="mobile-menu__link">Recenze</a>
+            <a href="#faq" class="mobile-menu__link">FAQ</a>
             <a href="#kontakt" class="mobile-menu__link">Kontakt</a>
         </nav>
     </div>
 
     <main>
         <!-- Hero Section -->
+        <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="container hero__container">
                 <div class="hero__content">
                     <h1 class="hero__title">
-                        Jste v <span class="highlight">dluhové pasti</span> a vyhrožují vám nebankovní společnosti?
+                        Jste v <span class="highlight">dluhové pasti</span><br>a vyhrožují vám nebankovní společnosti?
                     </h1>
                     <p class="hero__text">
                         Pomůžeme vám, zbavíme vás dluhů a vymůžeme přeplacené úroky zpět.
@@ -96,40 +98,7 @@
                     </div>
                 </div>
 
-                <div class="hero__visual">
-                    <!-- Circular design wrapper -->
-                    <div class="hero__circle-wrapper">
-                        <div class="hero__main-circle">
-                            <img src="Obrazky/248.jpg" alt="Specialista na oddlužení" class="hero__image">
-                        </div>
-
-                        <!-- Orbiting elements / Floating cards -->
-                        <div class="hero__float-card hero__float-card--1 glass">
-                            <i class="bi bi-graph-up-arrow icon-blue"></i>
-                            <div>
-                                <span class="block fw-bold">162.000,-</span>
-                                <span class="text-sm">Vrácené úroky</span>
-                            </div>
-                        </div>
-
-                        <div class="hero__float-card hero__float-card--2 glass">
-                            <i class="bi bi-check-circle-fill icon-green"></i>
-                            <div>
-                                <span class="block fw-bold">Oddlužení</span>
-                                <span class="text-sm">Schváleno</span>
-                            </div>
-                        </div>
-
-                        <!-- Decoration rings -->
-                        <div class="hero__ring hero__ring--1"></div>
-                        <div class="hero__ring hero__ring--2"></div>
-                    </div>
-                </div>
             </div>
-
-            <!-- Background decoration -->
-            <div class="hero__bg-blob hero__bg-blob--1"></div>
-            <div class="hero__bg-blob hero__bg-blob--2"></div>
         </section>
 
         <!-- Services Section -->
@@ -172,8 +141,18 @@
                         <p>Ani půjčky na IČO pro nás nejsou problém. Pomůžeme i Vám.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="features-grid mt-5">
+        <!-- Features Section -->
+        <section class="section features bg-light" id="proc-my">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Proč si vybrat nás?</h2>
+                    <p class="section-subtitle">Jsme na vaší straně od začátku až do konce</p>
+                </div>
+
+                <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-number">1</div>
                         <div>
@@ -308,12 +287,15 @@
                             <h3>Příběh pana Gamblera</h3>
                         </div>
                         <div class="case-card__body">
-                            <p><strong>Situace:</strong> Dlužil 278.000 Kč u rychlých půjček. Původní jistina byla jen
-                                80.000 Kč, ale přeplatil už 180.000 Kč.</p>
+                            <p>Obrátil se na nás gambler s prosbou o pomoc s vyřízením insolvence s tím, že dluží
+                                několika poskytovatelům rychlých půjček celkem 278.000,- Kč a nemá jiné řešení. Po
+                                analýze smluv a obratů však bylo zjištěno, že původní jistiny byly celkem jen 80.000,- a
+                                že věřitelům od roku 2023 již přeplatil 180.000,- Kč.</p>
                             <div class="case-result success">
                                 <h4><i class="bi bi-lightning-charge-fill"></i> Výsledek</h4>
-                                <p>Smlouvy zneplatněny. Dluhy odpuštěny. Vráceno 162.000 Kč na přeplatcích.</p>
-                                <div class="save-tag">Ušetřeno 360.000 Kč</div>
+                                <p>Smlouvy jsme zneplatnili a zařídili smíry, kdy byly klientovi dluhy odpuštěny a
+                                    společnosti mu vrátily přeplacené úroky 162.000,- Kč.</p>
+                                <div class="save-tag">Klientovi jsme tak ušetřili 360 tis. Kč</div>
                             </div>
                         </div>
                     </div>
@@ -325,12 +307,15 @@
                             <h3>Příběh maminky samoživitelky</h3>
                         </div>
                         <div class="case-card__body">
-                            <p><strong>Situace:</strong> Dlužila údajně 75.000 Kč z půjčky 40.000 Kč. Již 30.000 Kč
-                                splatila.</p>
+                            <p>Obrátila se na nás maminka samoživitelka, která se dostala do dluhové pasti, kdy
+                                vytloukala půjčku půjčkou. Skončilo to půjčkou jistiny ve výši 40.000,- Kč a společnost
+                                po ní požadovala vrátit 75.000,- Kč. Společnosti však již 30.000,- Kč splatila, tedy na
+                                jistině dlužila už jen 10.000,- Kč.</p>
                             <div class="case-result success">
                                 <h4><i class="bi bi-lightning-charge-fill"></i> Výsledek</h4>
-                                <p>Dohodnut splátkový kalendář pouze na zbývající jistinu 10.000 Kč (11x 1.000 Kč).</p>
-                                <div class="save-tag">Ušetřeno 64.000 Kč</div>
+                                <p>Skrze zneplatnění smluv jsme jí se společností dohodli splátkový kalendář na 11
+                                    měsíčních splátek po 11.000,- Kč.</p>
+                                <div class="save-tag">Klientce jsme tak ušetřili 64.000,- Kč</div>
                             </div>
                         </div>
                     </div>
@@ -343,28 +328,32 @@
             <div class="container">
                 <h2 class="section-title text-center">Co o nás říkají klienti</h2>
 
-                <div class="reviews-grid mt-5">
-                    <div class="review-card glass">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Děkuji, s vámi je ten život hned lehčí."</p>
-                        <p class="review-author">- Zuzana Z.</p>
+                <div class="reviews-slider mt-5">
+                    <div class="reviews-track">
+                        <div class="review-card glass" data-tilt>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-text">"Děkuji, s vámi je ten život hned lehčí."</p>
+                            <p class="review-author">- Zuzana Z.</p>
+                        </div>
+                        <div class="review-card glass" data-tilt>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-text">"Peníze došly, smekám, jste frajer."</p>
+                            <p class="review-author">- Pavel B.</p>
+                        </div>
+                        <div class="review-card glass" data-tilt>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-text">"Jste doslova finanční anděl."</p>
+                            <p class="review-author">- Klára S.</p>
+                        </div>
+                        <div class="review-card glass" data-tilt>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-text">"Absolutně vás obdivuji, kolika lidem se snažíte pomoc jak nejvíce
+                                můžete, patří vám jedno velké díky."</p>
+                            <p class="review-author">- Adriana V.</p>
+                        </div>
                     </div>
-                    <div class="review-card glass">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Peníze došly, smekám, jste frajer."</p>
-                        <p class="review-author">- Pavel B.</p>
-                    </div>
-                    <div class="review-card glass">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Jste doslova finanční anděl."</p>
-                        <p class="review-author">- Klára S.</p>
-                    </div>
-                    <div class="review-card glass">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Absolutně vás obdivuji, kolika lidem se snažíte pomoc jak nejvíce
-                            můžete, patří vám jedno velké díky."</p>
-                        <p class="review-author">- Adriana V.</p>
-                    </div>
+
+                    <!-- Slider Navigation (optional, adding dots for JS control) -->
                 </div>
             </div>
         </section>
@@ -418,61 +407,34 @@
         <!-- Contact Section -->
         <section class="section contact" id="kontakt">
             <div class="container">
-                <div class="grid grid--2 align-center">
-                    <div class="contact-info">
-                        <h2 class="section-title">Kontaktujte nás</h2>
-                        <p class="mb-4">Neváhejte se na nás obrátit. Jsme tu pro vás.</p>
+                <div class="contact-info text-center">
+                    <h2 class="section-title">Kontaktujte nás</h2>
+                    <p class="mb-5">Neváhejte se na nás obrátit. Jsme tu pro vás.</p>
 
+                    <div class="contact-grid">
                         <div class="contact-item">
                             <i class="bi bi-envelope-fill"></i>
-                            <a href="mailto:info@dluhypomoc.cz">info@dluhypomoc.cz</a>
+                            <div class="contact-item-text">
+                                <strong>E-mail</strong>
+                                <a href="mailto:info@dluhypomoc.cz">info@dluhypomoc.cz</a>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="bi bi-geo-alt-fill"></i>
-                            <span>Švermova 268, 460 10, Liberec 10</span>
+                            <div class="contact-item-text">
+                                <strong>Adresa</strong>
+                                <span>Švermova 268, 460 10, Liberec 10</span>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="bi bi-card-heading"></i>
-                            <span>IČ: 75569965</span>
+                            <div class="contact-item-text">
+                                <strong>Identifikace</strong>
+                                <span>IČ: 75569965</span>
+                            </div>
                         </div>
-                        <p class="legal-note mt-4">FO Zapsaná v Živnostenském Rejstříku v Liberci</p>
                     </div>
-
-                    <div class="contact-form-wrapper glass">
-                        <form action="https://formspree.io/f/mqakleng" method="POST" class="contact-form">
-                            <!-- Honeypot -->
-                            <input type="text" name="_honey" style="display:none">
-
-                            <!-- Disable Captcha -->
-                            <input type="hidden" name="_captcha" value="false">
-
-                            <!-- Next page redirect (optional) -->
-                            <!-- <input type="hidden" name="_next" value="https://dluhypomoc.cz/dekujeme.html"> -->
-
-                            <div class="form-group">
-                                <label for="name">Jméno a příjmení</label>
-                                <input type="text" id="name" name="name" required placeholder="Jan Novák">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" required placeholder="jan@email.cz">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Telefon</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+420 777 888 999">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Zpráva</label>
-                                <textarea id="message" name="message" rows="4" required
-                                    placeholder="Popište stručně váš problém..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn--primary btn--full">Odeslat poptávku</button>
-                        </form>
-                    </div>
+                    <p class="legal-note mt-5">FO Zapsaná v Živnostenském Rejstříku v Liberci</p>
                 </div>
             </div>
         </section>
