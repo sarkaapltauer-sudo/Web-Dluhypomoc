@@ -324,13 +324,19 @@ ul {
 /* Hero Section */
 .hero {
     position: relative;
-    padding-top: 240px;
-    /* Accounts for absolute header */
+    padding-top: 140px;
+    /* Default smaller top padding */
     padding-bottom: var(--spacing-xl);
     overflow: hidden;
     background: linear-gradient(135deg, #001a33, var(--color-primary-dark));
     color: var(--color-white);
     min-height: auto;
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        padding-top: 240px;
+    }
 }
 
 /* Remove image overlay */
