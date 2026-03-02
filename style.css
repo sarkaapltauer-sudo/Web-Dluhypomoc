@@ -213,23 +213,24 @@ ul {
 }
 
 .header--scrolled {
-    background: rgba(0, 26, 51, 0.95);
+    background: rgba(240, 244, 248, 0.95);
+    /* Matches .bg-light section backgrounds */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0.5rem 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
 }
 
 .header--scrolled .nav__link {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text);
 }
 
 .header--scrolled .nav__link:hover {
-    color: var(--color-white);
+    color: var(--color-primary);
 }
 
 .header--scrolled .hamburger span {
-    background: var(--color-white);
+    background: var(--color-text);
 }
 
 .header__container {
