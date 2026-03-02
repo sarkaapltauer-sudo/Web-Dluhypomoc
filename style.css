@@ -136,19 +136,19 @@ ul {
 }
 
 .mt-4 {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-md) !important;
 }
 
 .mt-5 {
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg) !important;
 }
 
 .mb-4 {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md) !important;
 }
 
 .mb-5 {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg) !important;
 }
 
 .highlight {
@@ -426,25 +426,29 @@ ul {
 
 /* General Sections */
 .section {
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    /* Larger top padding, regular bottom */
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .section {
-        padding: var(--spacing-lg) 0;
+        padding: 3rem 0 1.5rem;
     }
 }
 
 .section-title {
     font-size: var(--fs-h2);
-    margin-bottom: var(--spacing-xs);
-    line-height: 1.2;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    /* Tight line below the header */
+    line-height: 1.1;
 }
 
 .section-subtitle {
     color: var(--color-text-light);
     font-size: var(--fs-body);
     margin-bottom: var(--spacing-lg);
+    margin-top: 0;
 }
 
 /* Services */
