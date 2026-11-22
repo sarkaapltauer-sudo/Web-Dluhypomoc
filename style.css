@@ -903,7 +903,7 @@ ul {
 }
 
 .contact-info {
-    max-width: 1050px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -923,6 +923,7 @@ ul {
 @media (min-width: 992px) {
     .contact-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
     }
 }
 
@@ -974,6 +975,10 @@ ul {
 .contact-item span {
     color: var(--color-white);
     font-weight: 600;
+}
+
+.contact-address {
+    white-space: nowrap;
 }
 
 .contact-item a:hover {
