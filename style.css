@@ -255,6 +255,19 @@ ul {
     color: var(--color-white);
 }
 
+.nav__link--fb {
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.nav__link--fb:hover {
+    transform: scale(1.15);
+}
+
 .nav__cta {
     background: var(--color-primary);
     color: white;
@@ -319,6 +332,11 @@ ul {
     align-items: center;
     gap: var(--spacing-md);
     font-size: 1.5rem;
+}
+
+.mobile-menu__link--fb {
+    font-size: 2rem;
+    color: #1877f2;
 }
 
 /* Hero Section */
@@ -406,8 +424,8 @@ ul {
     margin-bottom: var(--spacing-md);
     font-size: 1.05rem;
     color: rgba(255, 255, 255, 0.85);
-    max-width: 720px;
-    line-height: 1.7;
+    max-width: 680px;
+    line-height: 1.6;
     border-left: 3px solid var(--color-secondary);
     padding: 0.75rem 1.25rem;
     background: rgba(255, 255, 255, 0.04);
@@ -885,7 +903,7 @@ ul {
 }
 
 .contact-info {
-    max-width: 900px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
@@ -896,9 +914,15 @@ ul {
     margin-top: var(--spacing-lg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .contact-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -950,6 +974,10 @@ ul {
 .contact-item span {
     color: var(--color-white);
     font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: #efac11;
 }
 
 .contact-info .legal-note {
